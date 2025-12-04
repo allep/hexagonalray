@@ -1,25 +1,7 @@
 #ifndef __FOR_PLAYING_H__
 #define __FOR_PLAYING_H__
 
-#include <cstdint>
-#include <cstddef>
-
-namespace Player {
-
-enum class Move : uint8_t {
-    None,
-    Up,
-    Down,
-    Left,
-    Right,
-};
-
-enum class Action : uint8_t {
-    None,
-    Interact,
-};
-
-}
+#include "Player.h"
 
 struct TickInfo {
     size_t PlayerIndex{};

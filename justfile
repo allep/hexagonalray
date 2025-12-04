@@ -12,3 +12,6 @@ test: make
 
 all: clean make test
 
+run: make
+    cd build && ./HexagonalRay
+

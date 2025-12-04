@@ -2,6 +2,8 @@
 
 #include <gtest/gtest.h>
 
+#include <iostream>
+
 class DisplayMock : public ForDisplaying {
 public:
   void PresentCharacter(size_t id, Position position) override {

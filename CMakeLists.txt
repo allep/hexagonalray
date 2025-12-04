@@ -13,7 +13,7 @@ add_library(game_engine
 )
 
 add_executable(game_engine_tests src/tests/GameEngineTests.cpp)
-target_include_directories(game_engine_tests PRIVATE app)
+target_include_directories(game_engine_tests PRIVATE src/app)
 target_link_libraries(game_engine_tests game_engine)
 target_link_libraries(game_engine_tests GTest::gtest GTest::gtest_main)
 

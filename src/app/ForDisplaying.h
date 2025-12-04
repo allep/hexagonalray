@@ -5,11 +5,13 @@
 #include <cstddef>
 #include <utility>
 
+using Position = std::pair<uint16_t, uint16_t>;
+
 class ForDisplaying {
 public:
     virtual ~ForDisplaying() = default;
 
-    virtual void PresentCharacter(size_t id, std::pair<uint8_t, uint8_t> position) = 0;
+    virtual void PresentCharacter(size_t id, Position position) = 0;
 };
 
 #endif

@@ -5,7 +5,7 @@
 #include <cstdint>
 #include <iostream>
 
-namespace Player {
+namespace PlayerInput {
 
 enum class Move : uint8_t {
     None,
@@ -20,9 +20,9 @@ enum class Action : uint8_t {
     Interact,
 };
 
-std::ostream &operator<<(std::ostream &os, Move m);
-std::ostream &operator<<(std::ostream &os, Action a);
+std::ostream& operator<<(std::ostream& os, Move m);
+std::ostream& operator<<(std::ostream& os, Action a);
 
-} // namespace Player
+} // namespace PlayerInput
 
 #endif

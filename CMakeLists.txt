@@ -12,6 +12,7 @@ file(GLOB SOURCES "src/app/*.cpp")
 add_library(game_engine 
     src/app/GameEngine.cpp
     src/app/PlayerInput.cpp
+    src/app/Character.cpp
 )
 
 add_executable(game_engine_tests src/tests/GameEngineTests.cpp)

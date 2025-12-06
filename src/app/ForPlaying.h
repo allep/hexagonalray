@@ -5,8 +5,8 @@
 
 struct TickInfo {
     size_t PlayerIndex{};
-    Player::Move Move{};
-    Player::Action Action{};
+    PlayerInput::Move Move{};
+    PlayerInput::Action Action{};
 };
 
 class ForPlaying {

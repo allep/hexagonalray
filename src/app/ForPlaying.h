@@ -1,7 +1,7 @@
 #ifndef __FOR_PLAYING_H__
 #define __FOR_PLAYING_H__
 
-#include "Player.h"
+#include "PlayerInput.h"
 
 struct TickInfo {
     size_t PlayerIndex{};

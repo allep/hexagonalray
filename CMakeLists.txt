@@ -11,7 +11,7 @@ find_package(raylib REQUIRED)
 file(GLOB SOURCES "src/app/*.cpp")
 add_library(game_engine 
     src/app/GameEngine.cpp
-    src/app/Player.cpp
+    src/app/PlayerInput.cpp
 )
 
 add_executable(game_engine_tests src/tests/GameEngineTests.cpp)

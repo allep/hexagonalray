@@ -15,13 +15,7 @@ add_library(game_engine
     src/app/Character.cpp
 )
 
-add_executable(game_engine_tests src/tests/GameEngineTests.cpp)
-target_include_directories(game_engine_tests PRIVATE src/app)
-target_link_libraries(game_engine_tests PRIVATE game_engine)
-target_link_libraries(game_engine_tests PRIVATE GTest::gtest GTest::gtest_main)
-
-add_test(NAME game_engine_tests COMMAND game_engine_tests)
-
+# Main Application
 add_executable(HexagonalRay src/main/main.cpp)
 target_include_directories(HexagonalRay PRIVATE src/app src/outbound_adapters)
 target_link_libraries(HexagonalRay PRIVATE game_engine raylib)
@@ -33,3 +27,20 @@ endif()
 if(APPLE)
     target_link_libraries(HexagonalRay PRIVATE "-framework OpenGL" "-framework Cocoa" "-framework IOKit")
 endif()
+
+# Tests
+
+add_executable(game_engine_tests src/tests/GameEngineTests.cpp)
+target_include_directories(game_engine_tests PRIVATE src/app)
+target_link_libraries(game_engine_tests PRIVATE game_engine)
+target_link_libraries(game_engine_tests PRIVATE GTest::gtest GTest::gtest_main)
+
+add_test(NAME game_engine_tests COMMAND game_engine_tests)
+
+add_executable(character_tests src/tests/CharacterTests.cpp)
+target_include_directories(character_tests PRIVATE src/app)
+target_link_libraries(character_tests PRIVATE game_engine)
+target_link_libraries(character_tests PRIVATE GTest::gtest GTest::gtest_main)
+
+add_test(NAME character_tests COMMAND character_tests)
+
